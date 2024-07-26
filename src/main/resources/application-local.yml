@@ -1,0 +1,8 @@
+server:
+  port: 1200
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/sb-task-mgmt
+      database: task-mgmt-sb
+      auto-index-creation: true
