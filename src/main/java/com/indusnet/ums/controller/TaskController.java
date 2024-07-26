@@ -62,7 +62,7 @@ public class TaskController {
         return new ResponseEntity<>(task, HttpStatus.OK);
     }
 
-    @PutMapping(value = "/update/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ResponseModel> updateTask(@PathVariable String id, @RequestBody TaskModel taskModel) {
         taskModel.setId(id);
         ResponseModel response = taskService.updateTask(taskModel);
